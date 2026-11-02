@@ -1,0 +1,63 @@
+
+/* Style the whole page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+    margin: 0;
+    padding: 40px;
+}
+
+/* Style the heading */
+h1 {
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Style the input box */
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+/* Style the button */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Change button color when hovering */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Style the list */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+/* Style each name in the list */
+li {
+    background-color: white;
+    padding: 12px;
+    margin: 10px auto;
+    max-width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* Change the name's appearance when hovering */
+li:hover {
+    background-color: #e0e0e0;
+}

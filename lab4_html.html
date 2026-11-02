@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <style>
+        body {
+            background-color: #f0f4f8;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            margin: 0;
+        }
+
+        .todo-container {
+            background: white;
+            width: 600px;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #1a202c;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        #todo-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        #add-btn {
+            background: #4299e1;
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .controls-row, .footer-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #718096;
+            margin-bottom: 15px;
+        }
+
+        .filters button, .clear-actions button {
+            background: none;
+            border: 1px solid #e2e8f0;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            color: #4a5568;
+            margin-left: 5px;
+        }
+
+            .filters button.active {
+                background: #ebf8ff;
+                color: #3182ce;
+                border-color: #bee3f8;
+            }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f7fafc;
+        }
+
+            li input[type="checkbox"] {
+                margin-right: 15px;
+                width: 16px;
+                height: 16px;
+            }
+
+            li span {
+                flex: 1;
+            }
+
+            li.completed span {
+                text-decoration: line-through;
+                color: #a0aec0;
+            }
+
+        .delete-btn {
+            background: none;
+            border: none;
+            color: #cbd5e0;
+            cursor: pointer;
+        }
+
+        .edit-input {
+            flex: 1;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="todo-container">
+        <h2>Todo App</h2>
+
+        <div class="input-group">
+            <input type="text" id="todo-input" placeholder="What needs doing?">
+            <button id="add-btn">Add</button>
+        </div>
+
+        <div class="controls-row">
+            <span class="tip">Tip: double-click a todo to edit. Press Enter to save.</span>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+        </div>
+
+        <ul id="todo-list"></ul>
+
+        <div class="footer-row">
+            <span id="item-count">0 items left</span>
+            <div class="clear-actions">
+                <button id="clear-completed">Clear completed</button>
+                <button id="clear-all">Clear all</button>
+            </div>
+        </div>
+    </div>
+    <script src="lab4_webbb.js"></script>
+</body>
+</html>
